@@ -1,4 +1,4 @@
 # Beyran
 
-Beyran is a basic Wikipedia wrapper for reading articles at your terminal.
-![main screen](https://thumbs2.imgbox.com/33/06/hDUr1UtV_t.png)
+Beyran is a simple wrapper that allows you to read Wikipedia articles on the terminal.
+![main screen](http://tinyimg.io/i/artYQ9F.png)
