@@ -16,6 +16,11 @@ Beyran is a simple wrapper that allows you to read Wikipedia articles on the ter
 - [ ] Cleaner code
 - [ ] Making search with single command and arguments
 
+### Used Modules
+- [Wikipedia 1.4.0](https://pypi.org/project/wikipedia/)
+- [Pyperclip 1.7.0](https://pypi.org/project/pyperclip/)
+- [Colorama 0.4.3](https://pypi.org/project/colorama/)
+- [Click 7.0](https://pypi.org/project/click) (added for future updates.)
 
 ![summary screen](http://tinyimg.io/i/VG9l7BH.png)
 ![full result](http://tinyimg.io/i/8OTi79Z.png)
