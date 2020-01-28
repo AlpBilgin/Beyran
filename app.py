@@ -1,12 +1,15 @@
 import wikipedia, pyperclip, click
 from colorama import Fore, Back, Style
-from funcs import emptyLine, resultRender, pageSelect, listSearch, suggestList
+from funcs import emptyLine, resultRender, pageSelect, listSearch, mahmut, error
 
 # Aranacak argümanı kullanıcıdan alır. İleri sürümlerde argüman olarak da alabilecek
 search = input("Please type searched page: " + Fore.YELLOW).title()
 
 # Wikipedia'dan yapılan ilk 10 aramayı bir liste halinde searchQuery değerine aktarır.
-searchQuery = wikipedia.search(search)
+try:
+    searchQuery = wikipedia.search(search)
+except:
+    mahmut() # ;)
 
 # listSearch fonksiyonu searchQuery'den aldığı 10 değişkenli listeyi kullanıcıya gösterebilmesi için listSearch fonksiyonuna yollar
 listSearch(searchQuery)
@@ -23,5 +26,10 @@ emptyLine()
 resultRender(page)
 
 # Aranan sorgunun Wiki URL'i kullanıcının clipboard'una otomatik olarak yapıştırılır. İleride bu seçenek opsiyonel olacak.
-pyperclip.copy(page.url)
-print(Fore.RED + "Full URL copied to your clipboard")
+try:
+    pyperclip.copy(page.url)
+    print(Fore.RED + "Full URL copied to your clipboard")
+except pyperclip.PyperclipException:
+    error("Your clipboard engine doesnt work or not exist.")
+
+
