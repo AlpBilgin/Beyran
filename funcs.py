@@ -28,12 +28,14 @@ def fullPage(page):
         else:
             print(i)
     seeAlso(page)
-    textQuestion = input("Do you want to export this article? (y / n): " + Fore.YELLOW + Style.RESET_ALL)
-    if textQuestion == "y":
-        exportPage(page)
+    # Export option has disabled because it has problems.
+    # This option will replace again with updated version.
+    # textQuestion = input("Do you want to export this article? (y / n): " + Fore.YELLOW + Style.RESET_ALL)
+    # if textQuestion == "y":
+    #     exportPage(page)
     
-    else:
-        exit
+    # else:
+    #     exit
         
     
                    

@@ -1,7 +1,10 @@
 # Beyran
 
-Beyran is a simple wrapper that allows you to read Wikipedia articles on the terminal.
+Beyran is a simple wrapper that allows you to read Wikipedia articles on the terminal. This project just for making Python practice and  in development. You can see several bugs and stupid code blocks. If you have any advice, please tell me.
 ![main screen](http://tinyimg.io/i/artYQ9F.png)
+
+## For run
+`python app.py` or you can set an alias.
 
 ## Features
 * Direct search from Wikipedia
@@ -9,8 +12,10 @@ Beyran is a simple wrapper that allows you to read Wikipedia articles on the ter
 * .TXT export mode.
 * Wikipedia links automatically copy to your clipboard.
 
+
+
 ## TO-DO List
-- [ ] Readable txt output
+- [ ] Readable txt output 
 - [ ] PDF output option
 - [ ] HTML output option
 - [ ] Cleaner code
