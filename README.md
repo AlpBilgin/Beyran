@@ -17,6 +17,7 @@ Beyran is a simple wrapper that allows you to read Wikipedia articles on the ter
 - [ ] Making search with single command and arguments
 - [ ] Section view for articles
 - [ ] Better full page mode divided by sections
+- [ ] Better reader mode (maybe?)
 - [X] "See Also" option in summary and full page modes
 
 ## Used Modules
