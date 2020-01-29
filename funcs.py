@@ -27,11 +27,14 @@ def fullPage(page):
                 print(Fore.RED + i + Style.RESET_ALL) 
         else:
             print(i)
+    seeAlso(page)
     textQuestion = input("Do you want to export this article? (y / n): " + Fore.YELLOW + Style.RESET_ALL)
     if textQuestion == "y":
         exportPage(page)
+    
     else:
         exit
+        
     
                    
 def resultRender(page):
@@ -84,4 +87,33 @@ def listSearch(searchQuery):
 def mahmut():
     resultRender(wikipedia.page("Mahmud"))
     exit
-    
+
+def seeAlso(page):
+    seeAlsoQuestion = input(Fore.BLUE + "Do you want to see also section? (y / n): " + Fore.YELLOW + Style.RESET_ALL)
+    if seeAlsoQuestion == "y":
+        readControl = 0
+        seeAlsoArray = []
+        pageArray = page.content.split("\n")
+
+        for i in pageArray:
+            if i == "== See also ==":
+                readControl = 1
+
+            if readControl == 1:
+                seeAlsoArray += str(i).split("-")
+
+            if i == "":
+                readControl = 0
+        
+        del seeAlsoArray[0]
+        del seeAlsoArray[-1]
+        for i in seeAlsoArray:
+            print(i)
+        if len(seeAlsoArray) != 0:
+            listSearch(seeAlsoArray)
+            selectedPage = input("Please choose one of the following options (Press enter for first option)=> " + Fore.YELLOW)
+            page = pageSelect(seeAlsoArray, selectedPage)
+            emptyLine()
+            resultRender(page)
+        else:
+            error("This page hasn't \'See Also\' section")
