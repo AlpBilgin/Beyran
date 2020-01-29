@@ -88,6 +88,7 @@ def mahmut():
     resultRender(wikipedia.page("Mahmud"))
     exit
 
+
 def seeAlso(page):
     seeAlsoQuestion = input(Fore.BLUE + "Do you want to see also section? (y / n): " + Fore.YELLOW + Style.RESET_ALL)
     if seeAlsoQuestion == "y":
@@ -117,3 +118,18 @@ def seeAlso(page):
             resultRender(page)
         else:
             error("This page hasn't \'See Also\' section")
+
+
+def seeSections(page):
+    sectionArray = []
+    trimmedSectionArray = []
+    pageArray = page.content.split("\n")
+    for i in pageArray:
+        if i[0:3] == "===" or i[0:3] == "== ":
+            sectionArray.append(str(i).replace("=",""))
+
+    for i in sectionArray:
+        i = i.strip()
+        trimmedSectionArray.append(i)
+    
+    return trimmedSectionArray
