@@ -130,3 +130,4 @@ dmypy.json
 
 .vscode/
 .pyc
+__pycache__/funcs.cpython-38.pyc
