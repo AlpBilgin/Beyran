@@ -15,7 +15,7 @@ Beyran is a simple wrapper that allows you to read Wikipedia articles on the ter
 - [ ] HTML output option
 - [ ] Cleaner code
 - [ ] Making search with single command and arguments
-- [ ] "See Also" option in summary and full page modes
+- [X] "See Also" option in summary and full page modes
 
 ## Used Modules
 - [Wikipedia 1.4.0](https://pypi.org/project/wikipedia/)
